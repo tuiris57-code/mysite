@@ -3,6 +3,11 @@ import path from "path";
 
 const VAULT_PATH = process.env.VAULT_PATH || "/Users/towhich/🌟ME/知识库/公开资料";
 
+if (!fs.existsSync(VAULT_PATH)) {
+  console.log(`Vault not found at ${VAULT_PATH}, skipping sync (using existing content/)`);
+  process.exit(0);
+}
+
 const contentDir = path.join(process.cwd(), "content");
 
 if (!fs.existsSync(contentDir)) {
