@@ -5,7 +5,6 @@ import {
   getRecentArticles,
   getLatestArticle,
 } from "../lib/content";
-import VisitorCounter from "../components/VisitorCounter";
 
 const tools = [
   { name: "毛选抽卡", icon: "🎴", href: "https://splendid-cuchufli-7f2f20.netlify.app/", external: true },
@@ -67,18 +66,12 @@ export default function Home() {
         </Link>
 
         {/* Module 3: Article count */}
-        <Link href="/knowledge" className="col-span-2 md:col-span-2 no-underline">
+        <Link href="/knowledge" className="col-span-2 md:col-span-3 no-underline">
           <div className="bg-coral/10 rounded-2xl p-5 h-full hover:bg-coral/15 transition-colors">
             <div className="text-4xl font-bold text-coral font-serif">{articleCount}</div>
             <p className="text-sm text-coral/70 mt-1 m-0">已收集经验</p>
           </div>
         </Link>
-
-        {/* Module 4: Visitor count */}
-        <div className="col-span-2 md:col-span-1 bg-oat-dark rounded-2xl p-5">
-          <VisitorCounter />
-          <p className="text-sm text-teal/50 mt-1 m-0">来访</p>
-        </div>
 
         {/* Module 7: AI Daily */}
         <div className="col-span-4 md:col-span-3 md:row-span-3 bg-teal rounded-2xl p-5 text-white/90 flex flex-col">
